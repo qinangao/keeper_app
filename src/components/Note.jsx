@@ -1,18 +1,11 @@
 import React from "react";
-import Entry from "./Entry";
-import notes from "../notes";
 
-function Note() {
+function Note(props) {
   return (
-    <div>
-      {notes.map((notesTerm) => (
-        <Entry
-          key={notesTerm.key}
-          title={notesTerm.title}
-          content={notesTerm.content}
-        />
-      ))}
-      ;
+    <div className="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button>DELETE</button>
     </div>
   );
 }
